@@ -73,9 +73,9 @@ class DI
      * Injects arguments into its constructor.
      * 
      * @static
-     * @param type $className The name of new class.
-     * @param type $args An array of arguments which will be injected into constructor.
-     * @return type
+     * @param string $className The name of new class.
+     * @param array $args An array of arguments which will be injected into constructor.
+     * @return object Instance of new object.
      */
     protected static function build($className, $args)
     {
@@ -89,8 +89,8 @@ class DI
      * Throws an exception in case of missed one of them.
      * 
      * @static
-     * @param type $settings An array of raw settings.
-     * @param type $alias An alias.
+     * @param array $settings An array of raw settings.
+     * @param string $alias An alias.
      * @throws DIException
      */
     protected static function checkCriticalSettings($settings, $alias)
@@ -108,8 +108,8 @@ class DI
      * Verifies of whether all parameters was defined. And fills the missed.
      * 
      * @static
-     * @param type $settings An array of raw settings.
-     * @param type $alias An alias.
+     * @param array $settings An array of raw settings.
+     * @param string $alias An alias.
      * @return array Processed settings.
      */
     protected static function processSettings($settings, $alias)
